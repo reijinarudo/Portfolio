@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reginald Finley, Ph.D.</title>
+<meta name="description" content="Reginald Finley, Ph.D.: educator, scientist, and learning consultant working in AI literacy, industrial automation training, robotics outreach, and science education.">
+<meta name="author" content="Dr. Reginald Finley, Sr.">
+<meta property="og:title" content="Reginald Finley, Ph.D.">
+<meta property="og:description" content="AI literacy, training leadership, robotics outreach, and science education.">
+<meta property="og:image" content="https://drreginaldfinley.com/images/headshot.jpg">
+<meta property="og:url" content="https://drreginaldfinley.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --text: #111418;
+    --muted: #5a616c;
+    --line: #dfe2e7;
+    --tint: #eef0f3;
+    --blue: #2445c8;
+    --blue-dark: #1a3396;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body { margin: 0; background: #fff; color: var(--text); font: 17px/1.6 "Archivo", system-ui, sans-serif; font-variation-settings: "wdth" 100; }
+  img { display: block; max-width: 100%; }
+  a { color: var(--blue); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+
+  /* Top bar */
+  .bar { position: sticky; top: 0; z-index: 20; background: #fff; border-bottom: 1px solid var(--line); }
+  .bar .wrap { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .name { font-weight: 800; font-size: 18px; color: var(--text); text-decoration: none; font-variation-settings: "wdth" 112; white-space: nowrap; }
+  .bar nav { display: flex; align-items: center; gap: 28px; }
+  .bar nav a { color: var(--text); text-decoration: none; font-weight: 500; font-size: 15px; }
+  .bar nav a:hover { color: var(--blue); }
+  .bar nav a.cta { background: var(--blue); color: #fff; padding: 8px 16px; border-radius: 4px; }
+  .bar nav a.cta:hover { background: var(--blue-dark); color: #fff; }
+
+  /* Intro */
+  .intro { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: stretch; padding-top: 64px; padding-bottom: 72px; }
+  .intro h1 {
+    margin: 0 0 22px; font-weight: 700; font-size: 40px; line-height: 1.12; letter-spacing: -.01em;
+    font-variation-settings: "wdth" 108;
+  }
+  .intro p.lead { font-size: 19px; color: var(--muted); max-width: 600px; margin: 0 0 36px; }
+  .now { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--text); }
+  .now div { padding: 14px 18px 0 0; }
+  .now b { display: block; font-size: 15px; }
+  .now span { font-size: 14px; color: var(--muted); line-height: 1.45; display: block; }
+  .intro .photo { margin: 0; min-height: 460px; background: var(--tint) url("images/headshot.jpg") center 20% / cover no-repeat; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 4px; font-weight: 600; font-size: 16px; text-decoration: none; }
+  .btn.fill { background: var(--text); color: #fff; }
+  .btn.fill:hover { background: var(--blue); }
+  .btn.line { border: 1.5px solid var(--text); color: var(--text); }
+  .btn.line:hover { border-color: var(--blue); color: var(--blue); }
+
+  /* Section headings */
+  .block { padding: 72px 0; border-top: 1px solid var(--line); }
+  .block h2 { margin: 0 0 8px; font-size: 38px; font-weight: 800; line-height: 1.1; font-variation-settings: "wdth" 108; }
+  .block .sub { margin: 0 0 36px; color: var(--muted); max-width: 680px; }
+
+  /* Featured projects */
+  .featured { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 32px; }
+  .proj a.shot { display: block; aspect-ratio: 16 / 10; background: var(--tint); overflow: hidden; border: 1px solid var(--line); }
+  .proj a.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .3s; }
+  .proj a.shot:hover img { transform: scale(1.025); }
+  .proj a.shot.emblem { display: flex; align-items: center; justify-content: center; background: #f1ebe1; }
+  .proj a.shot.emblem img { width: auto; height: 74%; object-fit: contain; }
+  .proj .meta { display: flex; justify-content: space-between; gap: 16px; margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: .04em; }
+  .proj h3 { margin: 6px 0 6px; font-size: 24px; font-weight: 700; line-height: 1.2; }
+  .proj p { margin: 0 0 10px; color: var(--muted); font-size: 16px; }
+  .proj .visit { font-weight: 600; font-size: 15px; text-decoration: none; }
+  .proj .visit:hover { text-decoration: underline; }
+
+  /* More work list */
+  .more { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; margin-top: 56px; }
+  .more h3 { grid-column: 1 / -1; margin: 0 0 6px; font-size: 22px; font-weight: 700; }
+  .row { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .row b { font-size: 18px; }
+  .row small { margin-left: 8px; font-size: 13px; color: var(--blue); font-weight: 600; }
+  .row p { margin: 4px 0 0; color: var(--muted); font-size: 15.5px; }
+
+  /* Background: two columns */
+  .cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; }
+  .cols h3 { margin: 0 0 4px; font-size: 22px; font-weight: 700; }
+  .entry { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .entry b { display: block; font-size: 18px; }
+  .entry i { font-style: normal; color: var(--blue); font-weight: 600; font-size: 15px; }
+  .entry p { margin: 6px 0 0; color: var(--muted); font-size: 15.5px; }
+
+  /* Contact band */
+  .contact { background: var(--blue); color: #fff; padding: 72px 0; }
+  .contact h2 { margin: 0 0 12px; font-size: 38px; font-weight: 800; font-variation-settings: "wdth" 108; }
+  .contact p { margin: 0 0 28px; max-width: 640px; color: #dfe5fb; }
+  .contact .ways { display: flex; flex-wrap: wrap; gap: 14px; }
+  .contact .ways a { color: #fff; text-decoration: none; border: 1.5px solid rgba(255,255,255,.55); padding: 12px 20px; border-radius: 4px; font-weight: 600; }
+  .contact .ways a.main { background: #fff; color: var(--blue); border-color: #fff; }
+  .contact .ways a:hover { border-color: #fff; }
+  footer { padding: 26px 0; font-size: 14px; color: var(--muted); }
+
+  @media (max-width: 900px) {
+    .bar nav a:not(.cta) { display: none; }
+    .intro { grid-template-columns: 1fr; gap: 32px; padding-top: 28px; padding-bottom: 48px; }
+    .intro .photo { order: -1; min-height: 0; aspect-ratio: 4 / 3.4; }
+    .intro h1 { font-size: 29px; }
+    .now { grid-template-columns: 1fr; }
+    .now div { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .featured, .more, .cols { grid-template-columns: 1fr; }
+    .cols { gap: 40px; }
+    .block { padding: 52px 0; }
+    .block h2, .contact h2 { font-size: 30px; }
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 0 18px; }
+    .name { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="name" href="#top">Reginald Finley, Ph.D.</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#background">Background</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap intro">
+    <div>
+      <h1>I teach how complex systems work, and how to use AI without giving up your judgment.</h1>
+      <p class="lead">Educator, scientist, and learning consultant. I train engineers on industrial automation for Siemens, teach anatomy, physiology, and statistics at Franklin University, and build AI and robotics programs for learners.</p>
+      <div class="now">
+        <div><b>Siemens SITRAIN</b><span>Learning Consultant</span></div>
+        <div><b>Franklin University</b><span>Adjunct Instructor and doctoral methodologist</span></div>
+        <div><b>Finley Robotics Initiative</b><span>Founder</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn fill" href="#work">See my work</a>
+        <a class="btn line" href="https://www.linkedin.com/in/reginaldfinley/">LinkedIn profile</a>
+      </div>
+    </div>
+    <div class="photo" role="img" aria-label="Portrait of Dr. Reginald Finley"></div>
+  </div>
+
+  <section class="block" id="work">
+    <div class="wrap">
+      <h2>Work</h2>
+      <p class="sub">Projects I lead or built. The first four have public pages you can visit.</p>
+
+      <div class="featured">
+        <article class="proj">
+          <a class="shot emblem" href="https://accesstorobotics.org/ai-course/"><img src="images/aier-shield.png" alt="AI-Epistemic Resilience emblem"></a>
+          <div class="meta"><span>AI literacy</span><span>Course and book</span></div>
+          <h3>AI-Epistemic Resilience</h3>
+          <p>My framework for using AI while keeping your own judgment: verify claims, recognize uncertainty, and reflect on how you reached a conclusion. A self-paced course for professionals is online, and the book is forthcoming.</p>
+          <a class="visit" href="https://accesstorobotics.org/ai-course/">View the course</a>
+        </article>
+
+        <article class="proj">
+          <a class="shot" href="https://accesstorobotics.org"><img src="images/accesstorobotics.jpg" alt="Finley Robotics Initiative website"></a>
+          <div class="meta"><span>Robotics</span><span>Founder</span></div>
+          <h3>Finley Robotics Initiative</h3>
+          <p>A Georgia nonprofit that places robotics hardware and mentorship with high school students. The first scholarship cycle is open to students nationally.</p>
+          <a class="visit" href="https://accesstorobotics.org">accesstorobotics.org</a>
+        </article>
+
+        <article class="proj">
+          <a class="shot" href="https://georgiascience.org"><img src="images/georgiascience.jpg" alt="GeorgiaScience.org website"></a>
+          <div class="meta"><span>Science literacy</span><span>Curator</span></div>
+          <h3>GeorgiaScience.org</h3>
+          <p>The public site of Georgia Citizens for Integrity in Science Education, with resources and curated news on science education in Georgia and on how AI is affecting classrooms.</p>
+          <a class="visit" href="https://georgiascience.org">georgiascience.org</a>
+        </article>
+
+        <article class="proj">
+          <a class="shot" href="https://accesstorobotics.org"><img src="images/aiden-rose.jpg" alt="Dr. Finley with the Reachy Mini robots Aiden and Rose" style="object-position:center"></a>
+          <div class="meta"><span>Robotics</span><span>Built</span></div>
+          <h3>Aiden and Rose</h3>
+          <p>Two Reachy Mini robots I configured for teaching and outreach. Aiden runs a cloud conversation stack with a custom persona; Rose runs locally for classroom demonstrations.</p>
+        </article>
+      </div>
+
+      <div class="more">
+        <h3>More work</h3>
+        <div class="row"><b>Machines That Talk</b><small>Talk</small><p>How large language models produce text and how to evaluate what they say. Premiered at the Atlanta Freethought Society in August 2026. <a href="https://accesstorobotics.org/talks.html">Talk details</a></p></div>
+        <div class="row"><b>Siemens SITRAIN curriculum</b><small>Training</small><p>TIA Portal, S7-1500, and SINAMICS drive courses for about 1,000 engineers and technicians a year, including the SIMIT simulation setup for an updated programming course.</p></div>
+        <div class="row"><b>Private AI grading assistant</b><small>Built</small><p>A local AI assistant with document retrieval (RAG) on my own hardware, so student submissions never leave my machine.</p></div>
+        <div class="row"><b>Question Boldly</b><small>Video series</small><p>Short videos on how we come to believe what we believe, and how intellectual humility helps people disagree without doing harm. <a href="https://www.youtube.com/channel/UCT4Nd1kl6udQC0sAah5od_A">YouTube channel</a></p></div>
+        <div class="row"><b>Is Heaven the Sky?</b><small>Book in progress</small><p>A book expansion co-authored with Dr. Robert M. Price, with a planned chapter on the neuroscience of afterlife belief.</p></div>
+        <div class="row"><b>STEHM</b><small>Term coined</small><p>An extension of STEM that brings the health sciences into the same framework.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="background">
+    <div class="wrap">
+      <h2>Background</h2>
+      <p class="sub">Experience across industry, higher education, and public science education.</p>
+      <div class="cols">
+        <div>
+          <h3>Experience</h3>
+          <div class="entry"><b>Learning Consultant</b><i>Siemens Digital Industries, SITRAIN</i><p>Designs and delivers TIA Portal and industrial automation curriculum for engineers, technicians, and dealer networks. SITRAIN Level 2 Certified Instructor.</p></div>
+          <div class="entry"><b>Adjunct Instructor and Doctoral Research Methodologist</b><i>Franklin University</i><p>Teaches anatomy and physiology, statistics, and scientific literacy, and serves as methodologist on dissertation committees.</p></div>
+          <div class="entry"><b>Founder</b><i>Finley Robotics Initiative</i><p>Leads the board, the scholarship program, and outreach.</p></div>
+          <div class="entry"><b>Earlier roles</b><p>High school science teaching, the Skeletons Museum, Hewlett-Packard technical consulting, federal corrections, and media production.</p></div>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <div class="entry"><b>Ph.D., Education</b><i>University of South Africa</i><p>Critical Thinking in Science Education</p></div>
+          <div class="entry"><b>M.Sc., Artificial Intelligence</b><i>Woolf</i><p>In progress, expected 2027</p></div>
+          <div class="entry"><b>M.S., Biological Sciences</b><i>Clemson University</i></div>
+          <div class="entry"><b>M.Ed.</b><i>University at Buffalo (SUNY)</i></div>
+          <div class="entry"><b>B.S., Human Development</b><i>Amridge University</i><p>Magna cum laude</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>I am open to roles in AI enablement and literacy, responsible AI education, learning and development leadership, and faculty development, and to speaking invitations.</p>
+      <div class="ways">
+        <a class="main" href="mailto:contact@drreginaldfinley.com">Email me</a>
+        <a href="https://www.linkedin.com/in/reginaldfinley/">LinkedIn</a>
+        <a href="https://bsky.app/profile/drreginaldfinley.com">Bluesky</a>
+        <a href="https://github.com/reijinarudo">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer><div class="wrap">&copy; 2026 Reginald Finley</div></footer>
+
+</body>
+</html>
