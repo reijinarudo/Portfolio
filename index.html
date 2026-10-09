@@ -84,6 +84,15 @@
   .row small { margin-left: 8px; font-size: 13px; color: var(--blue); font-weight: 600; }
   .row p { margin: 4px 0 0; color: var(--muted); font-size: 15.5px; }
 
+
+  /* Code repos */
+  .repos { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .repo { display: flex; flex-direction: column; gap: 4px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 6px; text-decoration: none; color: var(--text); transition: border-color .2s; }
+  .repo:hover { border-color: var(--blue); }
+  .repo b { font-size: 17px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-weight: 600; color: var(--blue); }
+  .repo .rtag { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .repo .rdesc { font-size: 15px; color: var(--muted); line-height: 1.5; }
+  .allrepos { margin: 24px 0 0; font-weight: 600; }
   /* Background: two columns */
   .cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; }
   .cols h3 { margin: 0 0 4px; font-size: 22px; font-weight: 700; }
@@ -127,6 +136,7 @@
     <a class="name" href="#top">Reginald Finley, Ph.D.</a>
     <nav>
       <a href="#work">Work</a>
+      <a href="#code">Code</a>
       <a href="#background">Background</a>
       <a class="cta" href="#contact">Contact</a>
     </nav>
@@ -146,8 +156,9 @@
       </div>
       <div class="actions">
         <a class="btn fill" href="#work">See my work</a>
-        <a class="btn line" href="docs/Reginald_Finley_AI_Enablement_Portfolio_2026.pdf" target="_blank" rel="noopener">Download portfolio (PDF)</a>
-        <a class="btn line" href="https://www.linkedin.com/in/reginaldfinley/" target="_blank" rel="noopener">LinkedIn profile</a>
+        <a class="btn line" href="docs/Reginald_Finley_AI_Enablement_Portfolio_2026.pdf" target="_blank" rel="noopener">Portfolio (PDF)</a>
+        <a class="btn line" href="https://www.linkedin.com/in/reginaldfinley/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn line" href="https://github.com/reijinarudo" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
     <div class="photo" role="img" aria-label="Portrait of Dr. Reginald Finley"></div>
@@ -184,7 +195,7 @@
         </article>
 
         <article class="proj">
-          <a class="shot" href="https://accesstorobotics.org" target="_blank" rel="noopener"><img src="images/aiden-rose.jpg" alt="Dr. Finley with the Reachy Mini robots Aiden and Rose" style="object-position:center"></a>
+          <a class="shot" href="https://accesstorobotics.org" target="_blank" rel="noopener"><img src="images/roseandaiden.jpg" alt="Dr. Finley with the Reachy Mini robots Aiden and Rose" style="object-position:center"></a>
           <div class="meta"><span>Robotics</span><span>Built</span></div>
           <h3>Aiden and Rose</h3>
           <p>Two Reachy Mini robots I configured for teaching and outreach. Aiden runs a cloud conversation stack with a custom persona; Rose runs locally for classroom demonstrations.</p>
@@ -200,6 +211,25 @@
         <div class="row"><b>Is Heaven the Sky?</b><small>Book in progress</small><p>A book expansion co-authored with Dr. Robert M. Price, with a planned chapter on the neuroscience of afterlife belief.</p></div>
         <div class="row"><b>STEHM</b><small>Term coined</small><p>An extension of STEM that brings the health sciences into the same framework.</p></div>
       </div>
+    </div>
+  </section>
+
+
+  <section class="block" id="code">
+    <div class="wrap">
+      <h2>Open-source code</h2>
+      <p class="sub">Tools I built and released under the MIT License, with setup guides so others can run them on their own hardware.</p>
+      <div class="repos">
+        <a class="repo" href="https://github.com/reijinarudo/reachy-aiden" target="_blank" rel="noopener"><span class="rtag">Robotics</span><b>reachy-aiden</b><span class="rdesc">Turn a Reachy Mini Wireless into a voice companion with persona, long-term memory, and switchable Hugging Face, OpenAI, or Gemini backends.</span></a>
+        <a class="repo" href="https://github.com/reijinarudo/reachy-rose" target="_blank" rel="noopener"><span class="rtag">Robotics</span><b>reachy-rose</b><span class="rdesc">A Reachy Mini robot whose speech, language model, and voice run on a Mac mini at home, plus a guide to running one on your own hardware.</span></a>
+        <a class="repo" href="https://github.com/reijinarudo/instructional-assistant" target="_blank" rel="noopener"><span class="rtag">Teaching</span><b>instructional-assistant</b><span class="rdesc">Windows desktop assistant that listens to a live class and answers spoken questions aloud through the OpenAI Realtime API.</span></a>
+        <a class="repo" href="https://github.com/reijinarudo/local-grading-assistant" target="_blank" rel="noopener"><span class="rtag">Teaching</span><b>local-grading-assistant</b><span class="rdesc">Private AI grading assistant that runs on one computer you own, so student work never leaves local hardware.</span></a>
+        <a class="repo" href="https://github.com/reijinarudo/project-aion" target="_blank" rel="noopener"><span class="rtag">Voice AI</span><b>project-aion</b><span class="rdesc">A talking 3D desktop avatar for Windows: OpenAI realtime voice, VMagicMirror lip sync, calendar, and memory.</span></a>
+        <a class="repo" href="https://github.com/reijinarudo/job-search-pipeline" target="_blank" rel="noopener"><span class="rtag">Automation</span><b>job-search-pipeline</b><span class="rdesc">Nightly job monitor that reads employer ATS boards directly, screens postings by your rules, and emails a digest.</span></a>
+        <a class="repo" href="https://github.com/reijinarudo/audio-to-youtube-pipeline" target="_blank" rel="noopener"><span class="rtag">Automation</span><b>audio-to-youtube-pipeline</b><span class="rdesc">Turn a folder of audio recordings into captioned YouTube videos and upload them on a schedule.</span></a>
+        <a class="repo" href="https://github.com/reijinarudo/gedbook" target="_blank" rel="noopener"><span class="rtag">Genealogy</span><b>gedbook</b><span class="rdesc">Generate a print-ready family history book (PDF) from a GEDCOM file and a folder of photos.</span></a>
+      </div>
+      <p class="allrepos"><a href="https://github.com/reijinarudo" target="_blank" rel="noopener">See all repositories on GitHub</a></p>
     </div>
   </section>
 
